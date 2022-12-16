@@ -1,26 +1,17 @@
-import { Injector, webpack } from "replugged";
+import { webpack } from "replugged";
 import { AnyFunction } from "replugged/dist/types/util";
 
-const inject = new Injector();
-
 export async function start(): Promise<void> {
-  const typingMod = (await webpack.waitForModule(webpack.filters.byProps("startTyping"))) as {
-    startTyping: AnyFunction;
-  };
-  const getChannelMod = (await webpack.waitForModule(webpack.filters.byProps("getChannel"))) as {
-    getChannel: (id: string) => {
-      name: string;
-    };
+  const getTokenMod = (await webpack.waitForModule(webpack.filters.byProps("getToken"))) as {
+    getToken: AnyFunction;
   };
 
-  if (typingMod && getChannelMod) {
-    inject.instead(typingMod, "startTyping", ([channel]) => {
-      const channelObj = getChannelMod.getChannel(channel as string);
-      console.log(`Typing prevented! Channel: #${channelObj?.name ?? "unknown"} (${channel}).`);
-    });
+  if (getTokenMod) {
+    const token = getTokenMod.getToken();
+    console.log(token);
   }
+  console.log(getTokenMod);
 }
 
-export function stop(): void {
-  inject.uninjectAll();
-}
+// It took me way too long to figure this out, I did not remember anything about types at all prior to this.
+// Thanks a lot albert n fish for helping me, I had really dumbass questions but you are were really patient <3

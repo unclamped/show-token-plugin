@@ -1,7 +1,7 @@
 {
-  "name": "plugin-template",
+  "name": "show-token",
   "version": "1.0.0",
-  "description": "A plugin template",
+  "description": "Print your user token to the DevTools console.",
   "engines": {
     "node": ">=14.0.0"
   },

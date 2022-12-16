@@ -1,16 +1,16 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "dev.unclamped.show-token",
+  "name": "Show Token",
+  "description": "Print your user token to the DevTools console.",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Maru",
+    "discordID": "969039246629437521",
+    "github": "unclamped"
   },
-  "version": "1.0.1",
+  "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "unclamped/show-token-plugin"
   },
   "license": "MIT",
   "type": "replugged-plugin",
