@@ -7,7 +7,7 @@
     "discordID": "969039246629437521",
     "github": "unclamped"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updater": {
     "type": "github",
     "id": "unclamped/show-token-plugin"
