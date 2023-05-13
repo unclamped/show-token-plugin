@@ -1,3 +1,5 @@
+# Deprecated, outdated, superseded. Don't use.
+
 # Show Token
 
 Print your user token to the DevTools console.
